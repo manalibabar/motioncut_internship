@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5501/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="./Payment Method1_files/style.css">
+    
+</head>
+<body>
+<div class="container">
+    <div class="title">
+        <h4>Select a <span style="color: #04AA6D">Payment</span> method</h4>
+    </div>
+
+    <form action="http://127.0.0.1:5501/index.html#">
+        <input type="radio" name="payment" id="gpay">
+        <input type="radio" name="payment" id="card">
+        <input type="radio" name="payment" id="bank">
+        <input type="radio" name="payment" id="cash">
+
+
+        <div class="category">
+            <label for="gpay" class="gpayMethod">
+                <div class="imgName">
+                    <div class="imgContainer gpay">
+                        <img src="./Payment Method1_files/gpayy.jpg" alt="">
+                    </div>
+                    <span class="name">UPI</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="card" class="creditcardMethod">
+                <div class="imgName">
+                    <div class="imgContainer card">
+                        <img src="./Payment Method1_files/card.png" alt="">
+                    </div>
+                    <span class="name">Credit/Debit Card </span>
+                    
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;" onclick="location.href=&#39;credit.html&#39;"></i></span>
+            </label>
+
+            <label for="bank" class="banktransferMethod">
+                <div class="imgName">
+                    <div class="imgContainer bank">
+                        <img src="./Payment Method1_files/bank.jpg" alt="">
+                    </div>
+                    <span class="name"> Net Banking</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+
+            <label for="cash" class="CashMethod">
+                <div class="imgName">
+                    <div class="imgContainer cash">
+                        <img src="./Payment Method1_files/cash1.jpg" alt="">
+                    </div>
+                    <span class="name">Cash on Delivery</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+            </label>
+        </div>
+    </form>
+    <button type="button" onclick="location.href='';credit.html;" fdprocessedid="x0ext">Continue</button>
+    
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
